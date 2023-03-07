@@ -31,10 +31,16 @@ SERVICE_NAME=cloud-gaming-demo
 DEMO_SNAP_COMMON_DIR="/var/snap/cloud-gaming-demo/common"
 APPLIANCE_SNAP_COMMON_DIR="/var/snap/anbox-cloud-appliance/common"
 
+# Installing Games
+
+# Base URL
 BUCKET="https://omega-cloud-apks.s3.amazonaws.com"
 
+# Games Array
 GAMES="pubg sonic_dash super_mario_run"
 
+
+# Single Games Location
 PUBG_DOWNLOAD_URL="${BUCKET}/pubg.apk"
 PUBG_PKG_ARCH="universal"
 
