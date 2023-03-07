@@ -31,11 +31,18 @@ SERVICE_NAME=cloud-gaming-demo
 DEMO_SNAP_COMMON_DIR="/var/snap/cloud-gaming-demo/common"
 APPLIANCE_SNAP_COMMON_DIR="/var/snap/anbox-cloud-appliance/common"
 
-GAMES="bombsquad mindustry"
-BOMBSQUAD_DOWNLOAD_URL="https://files.ballistica.net/bombsquad/builds/old/BombSquad_Android_Generic_1.7.1.apk"
-BOMBSQUAD_PKG_ARCH="universal"
-MINDUSTRY_DOWNLOAD_URL="https://f-droid.org/repo/io.anuke.mindustry_104.apk"
-MINDUSTRY_PKG_ARCH="universal"
+BUCKET="https://omega-cloud-apks.s3.amazonaws.com"
+
+GAMES="pubg sonic_dash super_mario_run"
+
+PUBG_DOWNLOAD_URL="${BUCKET}/pubg.apk"
+PUBG_PKG_ARCH="universal"
+
+SONIC_DASH_DOWNLOAD_URL="${BUCKET}/sonic_dash.apk"
+SONIC_DASH_PKG_ARCH="universal"
+
+SUPER_MARIO_RUN_DOWNLOAD_URL="${BUCKET}/super_mario_run.apk"
+SUPER_MARIO_RUN_PKG_ARCH="universal"
 
 print_help() {
     echo "Usage: ${0} [OPTIONS]"
