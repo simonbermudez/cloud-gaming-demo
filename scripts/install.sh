@@ -153,14 +153,14 @@ install_games() {
 
     local app_dir="${work_dir}/${game}"
     mkdir -p "${app_dir}" && chown -R ubuntu:ubuntu "${work_dir}"
-    # local download_url="${game^^}_DOWNLOAD_URL"
-    # wget "${!download_url}" -O "${app_dir}/app.apk"
+    local download_url="${game^^}_DOWNLOAD_URL"
+    wget "${!download_url}" -O "${app_dir}/app.apk"
     cat << EOF > "${app_dir}"/manifest.yaml
 name: $game
 instance-type: $instance_type
 EOF
     chown -R ubuntu:ubuntu "${app_dir}"
-    sudo -u ubuntu amc application create "${app_dir}"
+    # sudo -u ubuntu amc application create "${app_dir}"
     sudo -u ubuntu amc wait -c status=ready "${game}"
 
     echo "$game" >> "${work_dir}/.installed_games"
