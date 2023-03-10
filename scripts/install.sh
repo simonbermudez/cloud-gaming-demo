@@ -34,21 +34,30 @@ APPLIANCE_SNAP_COMMON_DIR="/var/snap/anbox-cloud-appliance/common"
 # Installing Games
 
 # Base URL
-BUCKET="https://omega-cloud-apks.s3.amazonaws.com"
+BUCKET="https://omega-cloud-apks.s3.amazonaws.com/APK_s"
 
 # Games Array
-GAMES="pubg sonic_dash super_mario_run"
+GAMES="super_mario_run sonic_dash roblox pubg mario_kart_tour apex_legends"
 
 
 # Single Games Location
-PUBG_DOWNLOAD_URL="${BUCKET}/pubg.apk"
-PUBG_PKG_ARCH="universal"
+SUPER_MARIO_RUN_DOWNLOAD_URL="${BUCKET}/Super+Mario+Run/com.nintendo.zara_3.0.26-22599_minAPI19(arm64-v8a)(nodpi)_apkmirror.com.apk"
+SUPER_MARIO_RUN_PKG_ARCH="universal"
 
-SONIC_DASH_DOWNLOAD_URL="${BUCKET}/sonic_dash.apk"
+SONIC_DASH_DOWNLOAD_URL="${BUCKET}/Sonic+Dash/com.sega.sonicdash_6.4.0-1712304154_minAPI22(arm64-v8a%2Carmeabi-v7a)(nodpi)_apkmirror.com.apk"
 SONIC_DASH_PKG_ARCH="universal"
 
-SUPER_MARIO_RUN_DOWNLOAD_URL="${BUCKET}/super_mario_run.apk"
-SUPER_MARIO_RUN_PKG_ARCH="universal"
+ROBLOX_DOWNLOAD_URL="${BUCKET}/Roblox/com.roblox.client_2.565.360-1426_minAPI21(arm64-v8a%2Carmeabi-v7a)(nodpi)_apkmirror.com.apk"
+ROBLOX_PKG_ARCH="universal"
+
+PUBG_DOWNLOAD_URL="${BUCKET}/PUBG+Mobile/com.tencent.iglite_0.25.0-15131_minAPI29(arm64-v8a)(nodpi)_apkmirror.com.apk"
+PUBG_PKG_ARCH="universal"
+
+MARIO_KART_TOUR_DOWNLOAD_URL="${BUCKET}/Mario+Kart+Tour/com.nintendo.zaka_3.2.1-323792101_minAPI21(arm64-v8a)(nodpi)_apkmirror.com.apk"
+MARIO_KART_TOUR_PKG_ARCH="universal"
+
+APEX_LEGENDS_DOWNLOAD_URL="${BUCKET}/Mario+Kart+Tour/com.nintendo.zaka_3.2.1-323792101_minAPI21(arm64-v8a)(nodpi)_apkmirror.com.apk"
+APEX_LEGENDS_PKG_ARCH="universal"
 
 print_help() {
     echo "Usage: ${0} [OPTIONS]"
