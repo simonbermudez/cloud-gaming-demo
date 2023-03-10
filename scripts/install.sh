@@ -160,8 +160,8 @@ name: $game
 instance-type: $instance_type
 EOF
     chown -R ubuntu:ubuntu "${app_dir}"
-    # sudo -u ubuntu amc application create "${app_dir}"
-    # sudo -u ubuntu amc wait -c status=ready "${game}"
+    sudo -u ubuntu amc application create "${app_dir}"
+    sudo -u ubuntu amc wait -c status=ready "${game}"
 
     echo "$game" >> "${work_dir}/.installed_games"
   done
@@ -231,7 +231,6 @@ if [ "\$(id -u)" -ne 0 ]; then
 fi
 
 snap remove --purge cloud-gaming-demo
-rm "${APPLIANCE_SNAP_COMMON_DIR}/traefik/conf/cloud-gaming-demo.yaml"
 
 games="$(echo $(cat ${work_dir}/.installed_games))"
 for game in \$games; do
