@@ -38,7 +38,7 @@ BUCKET="https://omega-cloud-apks.s3.amazonaws.com/APK_s"
 
 # Games Array
 GAMES="super_mario_run sonic_dash roblox pubg mario_kart_tour apex_legends"
-GAMES="" # Bypass instalation
+# GAMES="" # Bypass instalation
 
 # Single Games Location
 SUPER_MARIO_RUN_DOWNLOAD_URL="${BUCKET}/Super+Mario+Run/com.nintendo.zara_3.0.26-22599_minAPI19(arm64-v8a)(nodpi)_apkmirror.com.apk"
@@ -153,15 +153,15 @@ install_games() {
 
     local app_dir="${work_dir}/${game}"
     mkdir -p "${app_dir}" && chown -R ubuntu:ubuntu "${work_dir}"
-    local download_url="${game^^}_DOWNLOAD_URL"
-    wget "${!download_url}" -O "${app_dir}/app.apk"
+    # local download_url="${game^^}_DOWNLOAD_URL"
+    # wget "${!download_url}" -O "${app_dir}/app.apk"
     cat << EOF > "${app_dir}"/manifest.yaml
 name: $game
 instance-type: $instance_type
 EOF
-    chown -R ubuntu:ubuntu "${app_dir}"
-    sudo -u ubuntu amc application create "${app_dir}"
-    sudo -u ubuntu amc wait -c status=ready "${game}"
+    # chown -R ubuntu:ubuntu "${app_dir}"
+    # sudo -u ubuntu amc application create "${app_dir}"
+    # sudo -u ubuntu amc wait -c status=ready "${game}"
 
     echo "$game" >> "${work_dir}/.installed_games"
   done
