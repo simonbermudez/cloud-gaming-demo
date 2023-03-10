@@ -160,7 +160,7 @@ name: $game
 instance-type: $instance_type
 EOF
     chown -R ubuntu:ubuntu "${app_dir}"
-    # sudo -u ubuntu amc application create "${app_dir}"
+    sudo -u ubuntu amc application create "${app_dir}"
     sudo -u ubuntu amc wait -c status=ready "${game}"
 
     echo "$game" >> "${work_dir}/.installed_games"
