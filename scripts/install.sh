@@ -38,7 +38,7 @@ BUCKET="https://omega-cloud-apks.s3.amazonaws.com/APK_s"
 
 # Games Array
 GAMES="super_mario_run sonic_dash roblox pubg mario_kart_tour apex_legends"
-
+GAMES="" # Bypass instalation
 
 # Single Games Location
 SUPER_MARIO_RUN_DOWNLOAD_URL="${BUCKET}/Super+Mario+Run/com.nintendo.zara_3.0.26-22599_minAPI19(arm64-v8a)(nodpi)_apkmirror.com.apk"
