@@ -46,7 +46,7 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   late Future<List<Application>> futureApps;
-  final gameids = ['super_mario_run'];
+  final gameids = ['apex_legends', 'mario_kart_tour', 'pubg', 'roblox', 'sonic_dash', 'super_mario_run'];
 
   @override
   void initState() {
